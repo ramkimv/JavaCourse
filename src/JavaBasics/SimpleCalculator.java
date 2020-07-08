@@ -1,46 +1,55 @@
 package JavaBasics;
 
+import java.util.Scanner;
+
 public class SimpleCalculator {
 
 	public static void main(String[] args) {
-		int num1 = 123;
-		int num2 = 10;
 		
-		switch(5) {	
-		case 1:
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter two numbers: ");
+		double num1 = scan.nextDouble();
+		double num2 = scan.nextDouble();
+		System.out.println("Enter a operation to perform (+ , - , * , / , % ) : ");
+		char operation = scan.next().charAt(0);
+		
+		switch(operation) {	
+		case '+':
 			add(num1 , num2);
 			break;
-		case 2:
+		case '-':
 			subtract(num1 , num2);
 			break;
-		case 3:
+		case '*':
 			multiply(num1 , num2);
 			break;
-		case 4:
+		case '/':
 			division(num1 , num2);
 			break;
-		case 5:
+		case '%':
 			modulus(num1 , num2);
 			break;
-		
+		default:
+			System.out.println("Please select a correct operation");
 		}
 
 	}
-	public static void add(int a , int b) {
-		System.out.println("The addition of two number :"+(a+b));
+	public static void add(double num1 , double num2) {
+		System.out.println("The addition of two number :"+(num1+num2));
 		
 	}
-	public static void subtract(int a , int b) {
+	public static void subtract(double a , double b) {
 		System.out.println("The subtraction of two number :"+(a-b));
 	}
-	public static void multiply(int a , int b) {
+	public static void multiply(double a , double b) {
 		System.out.println("The product of two number :"+(a*b));
 		
 	}
-	public static void division(int a , int b) {
+	public static void division(double a , double b) {
 		System.out.println("The division of two number :"+(a/b));
 	}
-	public static void modulus(int a , int b) {
+	public static void modulus(double a , double b) {
 		System.out.println("The reminder of two number :"+(a%b));
 	}
 	

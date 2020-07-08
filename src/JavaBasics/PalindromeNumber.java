@@ -33,10 +33,7 @@ public class PalindromeNumber {
 		
 		System.out.println("Enter a number: ");
 		Scanner read = new Scanner(System.in);
-		
 		int number = read.nextInt();
-		
-		
 		isPalindrome(number);
 	}
 }

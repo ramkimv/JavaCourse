@@ -94,7 +94,7 @@ public class NonStaticFunctions {
 		String a1 = "Practicing Java programs"; //Local variables
 
 		return a1;
-		
+		 
 	}
 	
 	public void swap(NonStaticFunctions t) { //call by reference
